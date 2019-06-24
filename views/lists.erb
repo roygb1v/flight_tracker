@@ -1,0 +1,14 @@
+<% content_for :header_link do %>
+	<a class="add" href="/lists/new">New List</a>
+<% end %>
+
+<% @lists.each_with_index do |hsh, index| %>
+		<p>Flight Details <%= index + 1 %> </p>
+		<p>Airline: <%= hsh["airline"] %></p>
+		<p>Flight No.: <%= hsh["flight_number"] %></p>
+		<p>Destination: <%= hsh["destination"] %></p>
+		<p>Departure Time: <%= hsh["departure_time"] %></p>
+	<br>
+<% end %>
+
+
